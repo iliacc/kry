@@ -13,7 +13,7 @@
                         <a class="nav-link" href="demande.php">Nouvelle demande</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gestion back-office</a>
+                        <a class="nav-link" href="bek_ofis.php#">bek_ofis</a>
                     </li>
                 <?php else : ?>
                     <li><a href="index.php">Home</a></li>
