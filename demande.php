@@ -2,14 +2,6 @@
 // Inclure le header
 include_once('includes/header.php');
 
-// Connexion à la base de données
-$conn = mysqli_connect('localhost', 'root', 'root', 'kry');
-
-// Vérifier la connexion
-if (!$conn) {
-    die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
-}
-
 // Traitement du formulaire de soumission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire

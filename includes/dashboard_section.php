@@ -1,11 +1,4 @@
-<?php
-
-$conn = mysqli_connect('localhost', 'root', 'root', 'kry');
-
-if (!$conn) {
-    die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
-}
-
+<?php 
 // Récupérer les données de la table demandes_pieces
 $sql = "SELECT * FROM demandes_pieces";
 $result = mysqli_query($conn, $sql);

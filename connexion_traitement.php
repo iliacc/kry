@@ -1,19 +1,13 @@
 <?php
 session_start();
 
+include_once('includes/config.php');
+
 // Vérifier si le formulaire a été soumis
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les données du formulaire
     $username = $_POST['username'];
     $password = $_POST['password'];
-
-    // Connexion à la base de données
-    $conn = mysqli_connect('localhost', 'root', 'root', 'kry');
-
-    // Vérifier la connexion
-    if (!$conn) {
-        die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
-    }
 
     // Préparer la requête SQL
     $sql = "SELECT id, utilisateur, mot_de_passe FROM utilisateurs WHERE utilisateur = ?";

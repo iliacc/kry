@@ -6,14 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hachage sécurisé du mot de passe
     $email = $_POST['email'];
 
-    // Connexion à la base de données
-    $conn = mysqli_connect('localhost', 'root', 'root', 'kry');
-
-    // Vérifier la connexion
-    if (!$conn) {
-        die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
-    }
-
     // Préparer la requête SQL
     $sql = "INSERT INTO utilisateurs (utilisateur, mot_de_passe, email) VALUES (?, ?, ?)";
 

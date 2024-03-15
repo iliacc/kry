@@ -7,14 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pieces = $_POST['pieces'];
     $operateur = $_SESSION['username']; // Supposons que l'opérateur soit l'utilisateur connecté
 
-    // Connexion à la base de données
-    $conn = mysqli_connect('localhost', 'root', 'root', 'kry');
-
-    // Vérifier la connexion
-    if (!$conn) {
-        die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
-    }
-
     // Préparer la requête SQL pour insérer la demande de pièces
     $sql = "INSERT INTO demandes_pieces (ordre_reparation, demande, piece_libelle, piece_reference, operateur) VALUES (?, ?, ?, ?, ?)";
 
