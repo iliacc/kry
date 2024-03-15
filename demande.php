@@ -1,5 +1,4 @@
 <?php
-// Inclure le header
 include_once('includes/header.php');
 
 // Traitement du formulaire de soumission
@@ -44,9 +43,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <label for="demande">Demande :</label>
         <select id="demande" name="demande" required>
-            <option value="ajout">Ajout</option>
-            <option value="echange">Échange</option>
-            <option value="suppression">Suppression</option>
+            <option value="add">Ajout</option>
+            <option value="change">Échange</option>
+            <option value="delete">Suppression</option>
         </select><br><br>
 
         <fieldset id="pieces">
@@ -58,6 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="pieces[reference][]">
             </div>
         </fieldset>
+
         <button type="button" id="add_piece">Ajouter une pièce</button>
         <button type="button" id="remove_piece">Supprimer une pièce</button><br><br>
 

@@ -3,6 +3,8 @@
 $sql = "SELECT * FROM demandes_pieces";
 $result = mysqli_query($conn, $sql);
 
+include_once('includes/functions.php');
+
 // Vérifier s'il y a des données
 if (mysqli_num_rows($result) > 0) {
     // Afficher les données dans le tableau
@@ -25,12 +27,14 @@ if (mysqli_num_rows($result) > 0) {
     while ($row = mysqli_fetch_assoc($result)) {
         // Déterminer la classe CSS en fonction du statut
         $tableClass = ($row['statut'] == 'in_progress') ? 'table-light' : 'table-success';
+        $demande = $row['demande'];
+        $class = getClassForDemande($demande);
         
         // Afficher la ligne avec la classe CSS correspondante
         echo '<tr class="' . $tableClass . '">';
         echo '<td>' . $row['ordre_reparation'] . '</td>';
-        echo '<td>' . $row['demande'] . '</td>';
-        echo '<td>' . $row['statut'] . '</td>';
+        echo '<td><span class="badge ' . $class . '">' . $row['demande'] . '</span></td>';
+        echo '<td><span class="badge text-bg-info">' . $row['statut'] . '</span></td>';
         echo '<td>' . $row['piece_libelle'] . '</td>';
         echo '<td>' . $row['piece_reference'] . '</td>';
         echo '<td>' . $row['operateur'] . '</td>';
