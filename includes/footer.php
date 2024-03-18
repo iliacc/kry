@@ -1,3 +1,6 @@
+
+<footer class="text-center blockquote-footer mt-5"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo asperiores minima aperiam voluptate eius quas impedit eligendi. Alias placeat harum numquam nam, ut, quibusdam, ipsam at accusantium quos fugiat consequatur.</p></footer>
+
 </div>
 <script src="js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
