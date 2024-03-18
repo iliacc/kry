@@ -12,13 +12,19 @@
         <input type="password" class="form-control" id="password">
     </div>
     <div class="mb-3">
-        <select class="form-select" id="role">
-            <option selected>Choisir un rôle utilisateur</option>
-            <option value="1">Atelier</option>
-            <option value="2">Réception</option>
-            <option value="3">Magasin</option>
-            <option value="4">Administrateur</option>
-        </select>
+        <?php
+        if (mysqli_num_rows($roles) > 0) {
+            var_dump($roles);
+            echo '<select class="form-select" id="role">';
+            echo '<option selected>Choisir un rôle utilisateur</option>';
+            while ($row = mysqli_fetch_assoc($roles)) {
+                echo '<option value=" ' . $row['id'] . '"> ' . $row['name'] . ' </option> ';
+            }
+            echo '</select>';
+        } else {
+            echo 'Aucuns rôles utilisateur en base';
+        }
+        ?>
     </div>
     <div class="mb-3">
         <select class="form-select" id="site">

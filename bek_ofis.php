@@ -58,6 +58,7 @@ $sites = mysqli_query($conn, $sqlSites);
             <h3>Gestion des rôles utilisateurs</h3>
             <?php
             if (mysqli_num_rows($roles) > 0) {
+                var_dump($roles);
                 echo '<table class="table">';
                 echo '<thead>';
                 echo '<tr>';
