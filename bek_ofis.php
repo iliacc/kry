@@ -6,13 +6,22 @@ $sqlUsers = "SELECT * FROM utilisateurs";
 $sqlRoles = "SELECT * FROM roles";
 $sqlSites = "SELECT * FROM sites";
 $users = mysqli_query($conn, $sqlUsers);
-$roles = mysqli_query($conn, $sqlRoles);
-$sites = mysqli_query($conn, $sqlSites);
+// $roles = mysqli_query($conn, $sqlRoles);
+// $sites = mysqli_query($conn, $sqlSites);
 
 ?>
 
 <div class="content-bek-ofis">
     <!-- Section utilisateurs -->
+    <div class="row">
+        <button class="btn btn-success" onclick="exportDatabase()">Exporter la base de données</button>
+        <script>
+            function exportDatabase() {
+                // Appel du script PHP d'exportation de la base de données
+                window.location.href = 'export_database.php';
+            }
+        </script>
+    </div>
     <div class="row">
     <div id="users">
         <h3>Utilisateurs</h3>
