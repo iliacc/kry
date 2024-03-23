@@ -1,4 +1,4 @@
-<form>
+<form action="../requetes/add_user_traitement.php" method="post">
     <div class="mb-3">
         <label for="username" class="form-label">Nom d'utilisateur</label>
         <input type="text" class="form-control" id="username">
@@ -43,7 +43,7 @@
         ?>
     </div>
     <div class="mb-3">
-        <button class="btn btn-success" type="submit">Ajouter</button>
+        <button class="btn btn-success" type="submit">Ajouter un utilisateur</button>
     </div>
 </form>
 
