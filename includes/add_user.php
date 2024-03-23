@@ -14,11 +14,11 @@
     <div class="mb-3">
         <?php
         if (mysqli_num_rows($roles) > 0) {
-            var_dump($roles);
             echo '<select class="form-select" id="role">';
             echo '<option selected>Choisir un rôle utilisateur</option>';
-            while ($row = mysqli_fetch_assoc($roles)) {
-                echo '<option value=" ' . $row['id'] . '"> ' . $row['name'] . ' </option> ';
+            foreach($data as $roles) {
+                echo $roles;
+                echo '<option value=" ' . $data['id'] . '"> ' . $data['name'] . ' </option> ';
             }
             echo '</select>';
         } else {

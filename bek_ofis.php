@@ -6,8 +6,14 @@ $sqlUsers = "SELECT * FROM utilisateurs";
 $sqlRoles = "SELECT * FROM roles";
 $sqlSites = "SELECT * FROM sites";
 $users = mysqli_query($conn, $sqlUsers);
-// $roles = mysqli_query($conn, $sqlRoles);
-// $sites = mysqli_query($conn, $sqlSites);
+$roles = mysqli_query($conn, $sqlRoles);
+$sites = mysqli_query($conn, $sqlSites);
+$data = $roles->fetch_all(MYSQLI_ASSOC);
+
+foreach ($data as $row) {
+    # code..
+    echo $row;
+}
 
 ?>
 
@@ -67,7 +73,6 @@ $users = mysqli_query($conn, $sqlUsers);
             <h3>Gestion des rôles utilisateurs</h3>
             <?php
             if (mysqli_num_rows($roles) > 0) {
-                var_dump($roles);
                 echo '<table class="table">';
                 echo '<thead>';
                 echo '<tr>';

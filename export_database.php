@@ -5,7 +5,7 @@ include_once('includes/header.php');
 // Informations de connexion à la base de données
 $host = 'localhost';
 $user = 'root';
-$password = '';
+$password = 'root';
 $database = 'kry';
 
 // Nom du fichier d'export

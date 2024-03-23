@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'kry');
+$conn = mysqli_connect('localhost', 'root', 'root', 'kry');
 
 if (!$conn) {
     die('Erreur de connexion à la base de données : ' . mysqli_connect_error());
