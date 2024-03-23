@@ -9,16 +9,18 @@
     </div>
     <div class="mb-3">
         <label for="password" class="form-label">Mot de passe</label>
-        <input type="password" class="form-control" id="password">
+        <div class="input-group">
+            <input type="text" class="form-control" id="password" name="password" readonly>
+            <button type="button" class="btn btn-outline-secondary" id="generatePassword">Générer</button>
+        </div>
     </div>
     <div class="mb-3">
         <?php
         if (mysqli_num_rows($roles) > 0) {
             echo '<select class="form-select" id="role">';
             echo '<option selected>Choisir un rôle utilisateur</option>';
-            foreach($data as $roles) {
-                echo $roles;
-                echo '<option value=" ' . $data['id'] . '"> ' . $data['name'] . ' </option> ';
+            foreach ($dataRoles as $row) {
+                echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
             }
             echo '</select>';
         } else {
@@ -27,13 +29,18 @@
         ?>
     </div>
     <div class="mb-3">
-        <select class="form-select" id="site">
-            <option selected>Choisir un site</option>
-            <option value="1">St-Fons</option>
-            <option value="2">Francheville</option>
-            <option value="3">Calluire</option>
-            <option value="4">Bourgoin</option>
-        </select>
+    <?php
+        if (mysqli_num_rows($sites) > 0) {
+            echo '<select class="form-select" id="role">';
+            echo '<option selected>Choisir un site de production</option>';
+            foreach ($dataSites as $row) {
+                echo '<option value="' . $row['id'] . '">' . $row['name'] . '</option>';
+            }
+            echo '</select>';
+        } else {
+            echo 'Aucuns sites de production en base';
+        }
+        ?>
     </div>
     <div class="mb-3">
         <button class="btn btn-success" type="submit">Ajouter</button>

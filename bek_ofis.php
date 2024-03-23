@@ -8,12 +8,8 @@ $sqlSites = "SELECT * FROM sites";
 $users = mysqli_query($conn, $sqlUsers);
 $roles = mysqli_query($conn, $sqlRoles);
 $sites = mysqli_query($conn, $sqlSites);
-$data = $roles->fetch_all(MYSQLI_ASSOC);
-
-foreach ($data as $row) {
-    # code..
-    echo $row;
-}
+$dataRoles = $roles->fetch_all(MYSQLI_ASSOC);
+$dataSites = $sites->fetch_all(MYSQLI_ASSOC);
 
 ?>
 
@@ -72,7 +68,7 @@ foreach ($data as $row) {
                 echo '</tr>';
                 echo '</thead>';
                 echo '<tbody>';
-                while ($row = mysqli_fetch_assoc($roles)) {
+                foreach ($dataRoles as $row) {
                     echo '<tr>';
                     echo '<th scope="row">' . $row['id'] . '</th>';
                     echo '<td> ' . $row['name'] . '</td>';
@@ -96,7 +92,7 @@ foreach ($data as $row) {
                 echo '</tr>';
                 echo '</thead>';
                 echo '<tbody>';
-                while ($row = mysqli_fetch_assoc($sites)) {
+                foreach ($dataSites as $row) {
                     echo '<tr>';
                     echo '<th scope="row">' . $row['id'] . '</th>';
                     echo '<td> ' . $row['name'] . '</td>';
