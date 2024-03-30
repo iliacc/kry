@@ -1,5 +1,5 @@
 <?php
-include_once('includes/header.php');
+include_once ('includes/header.php');
 
 // Traitement du formulaire de soumission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -37,10 +37,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <div class="container">
     <h2>Formulaire de demande de pièces</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form class="style-form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="ordre_reparation">Ordre de réparation :</label>
         <input type="number" id="ordre_reparation" name="ordre_reparation" required><br><br>
-
+        <label for="">Fréquement utilisé :</label>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch">
+            <label class="form-check-label" for="">Switch oil filter Tucson</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch">
+            <label class="form-check-label" for="">Balai essuis-glace arrière</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch">
+            <label class="form-check-label" for="">Balais essuis-glace avant</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch">
+            <label class="form-check-label" for="">Retrait des traitements</label>
+        </div>
+        <br>
         <label for="demande">Demande :</label>
         <select id="demande" name="demande" required>
             <option value="add">Ajout</option>
@@ -57,11 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="pieces[reference][]">
             </div>
         </fieldset>
-
-        <button type="button" id="add_piece">Ajouter une pièce</button>
-        <button type="button" id="remove_piece">Supprimer une pièce</button><br><br>
-
-        <input type="submit" value="Soumettre">
+        <button type="button" class="btn btn-lg btn-outline-success" id="add_piece">Ajouter une pièce</button>
+        <button type="button" class="btn btn-lg btn-outline-danger" id="remove_piece">Supprimer une pièce</button>        
+        <input class="btn btn-lg btn-outline-primary" type="submit" value="Soumettre">
     </form>
 </div>
 
@@ -70,5 +85,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 mysqli_close($conn);
 
 // Inclure le footer
-include_once('includes/footer.php');
+include_once ('includes/footer.php');
 ?>

@@ -6,3 +6,15 @@
 .content-bek-ofis h3 {
     margin-top: .5em;
 }
+
+.style-form {
+    background-color: #d6efff;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.style-form > label {
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+}
