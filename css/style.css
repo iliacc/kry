@@ -1,20 +1,21 @@
+.style-form {
+  background: rgba(0, 87, 183, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.style-form > label {
+  font-weight: bold;
+  display: block;
+  text-transform: uppercase;
+}
+
 .content-bek-ofis > div {
-    border: 1px solid #cbcbcb;
-    border-radius: 5px;
-    margin-bottom: 1em;
+  border: 1px solid #cbcbcb;
+  border-radius: 5px;
+  margin-bottom: 1em;
 }
 .content-bek-ofis h3 {
-    margin-top: .5em;
+  margin-top: 0.5em;
 }
 
-.style-form {
-    background-color: #d6efff;
-    border-radius: 5px;
-    padding: 2rem;
-}
-
-.style-form > label {
-    font-weight: bold;
-    display: block;
-    text-transform: uppercase;
-}
+/*# sourceMappingURL=style.css.map */

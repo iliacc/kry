@@ -1,0 +1,26 @@
+// sass --watch css/style.scss css/style.css
+
+$blue: #0057B7;
+$yellow: #FFDD00;
+
+.style-form {
+  background: rgba($blue, .1);
+  border-radius: 10px;
+  padding: 1rem;
+  > label {
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+.content-bek-ofis {
+  > div {
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    margin-bottom: 1em;
+  }
+  h3 {
+    margin-top: 0.5em;
+  }
+}
