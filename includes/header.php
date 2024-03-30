@@ -22,8 +22,8 @@
     ?>
 
     <div class="container">
-        <header class="pt-5 pb-3">
-            <h1>Kry v1.0</h1>
+        <header id="header-style" class="pt-5 pb-3">
+            <h1>Kry•e•<em>v <span>1.0</span></em></h1>
             <h2 class="h6 text-body-secondary">Gestions et suivis des pièces entre réception, atelier et magasin</h2>
         </header>
         <?php include_once('includes/menu.php'); ?>

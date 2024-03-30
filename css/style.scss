@@ -1,14 +1,45 @@
 // sass --watch css/style.scss css/style.css
 
+// Fonts : 
+@font-face {
+    font-family: 'Rokkitt';
+    src: url(../fonts/Rokkitt-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'ItalicRokkitt';
+    src: url(../fonts/Rokkitt-Italic-VariableFont_wght.ttf);
+}
+
+$primary-font: 'Rokkitt';
+$light-font: 400;
 $blue: #0057B7;
 $yellow: #FFDD00;
+
+body {
+    font-family: $primary-font;
+}
+
+#header-style {
+    display: block;
+    h1 {
+        font-size: 5rem;
+        span {
+            font-size: 3rem;
+        }
+    }
+    h2 {
+        font-style: italic;
+        font-weight: $light-font;
+        margin-top: -35px;
+        margin-left: 105px;
+    }
+}
 
 .style-form {
   background: rgba($blue, .1);
   border-radius: 10px;
   padding: 1rem;
   > label {
-    font-weight: bold;
     display: block;
     text-transform: uppercase;
   }
